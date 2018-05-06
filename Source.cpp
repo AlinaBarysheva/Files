@@ -1,3 +1,4 @@
+Р РђР‘РћРўРђ РЎ Р¤РђР™Р›РђРњР
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -8,39 +9,39 @@ using namespace std;
 string file_name = "old_name.txt";
 
 int main() {
-	// Создание и открытие.
+	// РЎРѕР·РґР°РЅРёРµ Рё РѕС‚РєСЂС‹С‚РёРµ С„Р°Р№Р»Р°.
 	ofstream fout(file_name);
 	fout << "qwertyuiopasdfghjklzxcvbnm,\n\n\n\n\n\n\nfgsda26456345\n\n\n\n\tnbcvnvbcnvb";
-	// Закрытие файла.
+	// Р—Р°РєСЂС‹С‚РёРµ С„Р°Р№Р»Р°.
 	fout.close();
 
 	system("pause");
 	cout << endl;
 
-	// Открытие файла для чтения.
+	// РћС‚РєСЂС‹С‚РёРµ С„Р°Р№Р»Р° РґР»СЏ С‡С‚РµРЅРёСЏ.
 	ifstream fin(file_name);
 	int count = 0;
 	while (!fin.eof()) {
 		string str;
-		// Чтение строки из файла.
+		// Р§С‚РµРЅРёРµ СЃС‚СЂРѕРєРё РёР· С„Р°Р№Р»Р°.
 		getline(fin, str);
 		cout << str << endl;
 
-		// Прибавляем количество символов строки к счётчику.
+		// РџСЂРёР±Р°РІР»СЏРµРј РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ СЃС‚СЂРѕРєРё Рє СЃС‡РµС‚С‡РёРєСѓ.
 		count += str.length();
 	}
 
 	system("pause");
 	cout << endl;
 
-	// Переименование.
+	// РџРµСЂРµРёРјРµРЅРѕРІР°РЅРёРµ.
 	//int result = rename(file_name.c_str(), "new_name.txt");
 	//file_name = "new_name.txt";
 	
 	system("pause");
 	cout << endl;
 
-	// Удаление файла.
+	// РЈРґР°Р»РµРЅРёРµ С„Р°Р№Р»Р°.
 	remove(file_name.c_str());
 
 	system("pause");
